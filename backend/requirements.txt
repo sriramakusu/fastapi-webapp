@@ -14,5 +14,8 @@ sqlalchemy
 # for loading environment variables
 python-dotenv
 
+# for hashing
+passlib[bcrypt]
+
 # For email validation
 pydantic[email]

@@ -19,3 +19,7 @@ passlib[bcrypt]
 
 # For email validation
 pydantic[email]
+
+# For testing
+pytest
+requests

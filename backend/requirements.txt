@@ -1,0 +1,18 @@
+# FastAPI framework
+fastapi
+# ASGI server
+uvicorn
+# For templating
+jinja2
+# For static file
+aiofiles
+
+# For database
+sqlalchemy
+# psycopg2
+
+# for loading environment variables
+python-dotenv
+
+# For email validation
+pydantic[email]

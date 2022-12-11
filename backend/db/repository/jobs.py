@@ -18,5 +18,15 @@ def retreive_job(id:int,db:Session):
     return item
 
 def list_jobs(db : Session):
+    # all() returns the result of the query as a list.
     jobs = db.query(Job).filter(Job.is_active == True).all()
     return jobs
+
+def update_job_by_id(id:int, job: JobCreate,db: Session,owner_id):
+    existing_job = db.query(Job).filter(Job.id == id)
+    if not existing_job.first():
+        return 0
+    job.__dict__.update(owner_id=owner_id)  #update dictionary with new key value of owner_id
+    existing_job.update(job.__dict__)
+    db.commit()
+    return 1
